@@ -1,0 +1,21 @@
+services:
+  web:
+    container_name: "grooming-web"
+    build:
+      dockerfile: Dockerfile
+    networks:
+      - traefik-network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.grooming-web.rule=Host(`grooming.promotion-pal.ru`)"
+      - "traefik.http.routers.grooming-web.entrypoints=web"
+      - "traefik.http.routers.grooming-web.middlewares=redirect-to-https"
+      - "traefik.http.routers.grooming-web-secure.rule=Host(`grooming.promotion-pal.ru`)"
+      - "traefik.http.routers.grooming-web-secure.entrypoints=websecure"
+      - "traefik.http.routers.grooming-web-secure.tls.certresolver=letsencrypt"
+      - "traefik.http.services.grooming-web.loadbalancer.server.port=3000"
+
+networks:
+  traefik-network:
+    external: true
+    name: traefik-network

@@ -3,7 +3,6 @@ import { appConfig } from "@/shared/config/app";
 export default function Index() {
   return (
     <div className="min-h-screen">
-      {/* Hero секция */}
       <section className="relative min-h-[600px] flex items-center">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30 z-10" />
         <div className="container relative z-20">
@@ -33,7 +32,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Преимущества */}
       <section className="py-20 bg-wrapper/5">
         <div className="container">
           <div className="text-center mb-12">
@@ -82,7 +80,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Услуги и цены */}
       <section className="py-20">
         <div className="container">
           <div className="text-center mb-12">
@@ -196,7 +193,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Процесс работы */}
       <section className="py-20 bg-wrapper/5">
         <div className="container">
           <div className="text-center mb-12">
@@ -240,7 +236,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Отзывы */}
       <section className="py-20">
         <div className="container">
           <div className="text-center mb-12">
@@ -338,7 +333,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Форма записи */}
       <section className="py-20">
         <div className="container">
           <div className="bg-gradient-to-r from-wrapper/10 to-wrapper/5 rounded-2xl p-8 md:p-12">
@@ -394,7 +388,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Контакты и карта */}
       <section className="py-20 bg-wrapper/5">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12">
@@ -462,7 +455,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Подвал */}
       <footer className="border-t border-wrapper/20 py-8">
         <div className="container text-center text-gray-400 text-sm">
           <p>
@@ -479,82 +471,3 @@ export default function Index() {
     </div>
   );
 }
-
-// import { appConfig } from "@/shared/config/app";
-
-// export default function Index() {
-//   return (
-//     <div className="min-h-screen">
-//       <section className="container py-16 md:py-24">
-//         <div className="text-center">
-//           <h1 className="h1 mb-6">Профессиональный груминг</h1>
-//           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-//             Забота о вашем питомце с любовью и профессионализмом
-//           </p>
-//           <a
-//             href={appConfig.company.phone.link}
-//             className="inline-flex items-center justify-center px-6 py-3 bg-wrapper text-wrapper-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity"
-//           >
-//             Записаться на прием
-//           </a>
-//         </div>
-//       </section>
-
-//       <section className="bg-wrapper/5 py-16 md:py-24">
-//         <div className="container">
-//           <h2 className="h1 text-center mb-12">Наши услуги</h2>
-//           <div className="grid md:grid-cols-3 gap-8">
-//             {[
-//               {
-//                 title: "Стрижка",
-//                 description: "Профессиональная стрижка любой сложности",
-//               },
-//               {
-//                 title: "Мытье и уход",
-//                 description: "Используем только качественную косметику",
-//               },
-//               {
-//                 title: "Тримминг",
-//                 description: "Для жесткошерстных пород",
-//               },
-//             ].map((service) => (
-//               <div
-//                 key={service.title}
-//                 className="bg-wrapper text-wrapper-foreground p-6 rounded-xl shadow-lg"
-//               >
-//                 <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-//                 <p className="opacity-80">{service.description}</p>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       <section className="container py-16 md:py-24">
-//         <div className="bg-wrapper/10 rounded-xl p-8 max-w-2xl mx-auto text-center">
-//           <h2 className="h1 mb-8">Свяжитесь с нами</h2>
-//           <div className="space-y-4">
-//             <div>
-//               <p className="text-gray-400 mb-2">Телефон</p>
-//               <a
-//                 href={appConfig.company.phone.link}
-//                 className="text-xl font-semibold hover:underline"
-//               >
-//                 {appConfig.company.phone.label}
-//               </a>
-//             </div>
-//             <div>
-//               <p className="text-gray-400 mb-2">Email</p>
-//               <a
-//                 href={appConfig.company.email.link}
-//                 className="text-xl font-semibold hover:underline"
-//               >
-//                 {appConfig.company.email.label}
-//               </a>
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-//     </div>
-//   );
-// }
