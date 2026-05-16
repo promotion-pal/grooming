@@ -7,7 +7,6 @@ RUN npm install -g pnpm
 COPY package*.json ./
 
 RUN pnpm install
-RUN ls -la node_modules/.bin/next
 
 COPY . .
 
