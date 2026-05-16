@@ -18,7 +18,7 @@ export default function Index() {
 
         <div className="container relative z-20">
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <h1 className="text-2xl md:text-7xl font-bold mb-6">
               Профессиональный груминг
               <span className="block text-3xl md:text-4xl mt-2">
                 для ваших питомцев
