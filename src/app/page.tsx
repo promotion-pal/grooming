@@ -10,9 +10,9 @@ export default function Index() {
 
         <Image
           fill
-          src="/img/intro.webp"
           alt="intro"
-          className="object-cover"
+          src="/img/intro.webp"
+          className="object-cover rounded-lg"
         />
 
         <div className="container relative z-20">
@@ -45,8 +45,19 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-20 bg-wrapper/5">
-        <div className="container">
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            fill
+            alt="Background"
+            src="/img/1.jpg"
+            className="object-cover"
+            style={{ objectPosition: "50% 50%" }}
+          />
+          <div className="absolute inset-0 bg-black/70" />
+        </div>
+
+        <div className="container relative z-10">
           <div className="text-center mb-12">
             <span className="text-sm uppercase tracking-wider text-gray-400">
               Почему выбирают нас
@@ -85,7 +96,7 @@ export default function Index() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="bg-wrapper/10 rounded-xl p-6 text-center hover:bg-wrapper/20 transition-all"
+                className="bg-wrapper/10 rounded-xl p-6 text-center hover:bg-wrapper/20 transition-all backdrop-blur-sm"
               >
                 <div className="text-4xl mb-4">{item.icon}</div>
                 <h3 className="text-xl font-bold mb-2">{item.title}</h3>
@@ -102,11 +113,14 @@ export default function Index() {
             <span className="text-sm uppercase tracking-wider text-gray-400">
               Что мы предлагаем
             </span>
+
             <h2 className="h1 mt-2 mb-4">Услуги и цены</h2>
+
             <p className="text-gray-300 max-w-2xl mx-auto">
               Индивидуальный подход к каждому питомцу и породе
             </p>
           </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
@@ -300,7 +314,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Часто задаваемые вопросы */}
       <section className="py-20 bg-wrapper/5">
         <div className="container">
           <div className="text-center mb-12">
@@ -470,20 +483,6 @@ export default function Index() {
           </div>
         </div>
       </section>
-
-      <footer className="border-t border-wrapper/20 py-8">
-        <div className="container text-center text-gray-400 text-sm">
-          <p>
-            © {new Date().getFullYear()} {appConfig.company.name}. Все права
-            защищены.
-          </p>
-          <p className="mt-2">
-            <a href="#" className="hover:underline">
-              Политика конфиденциальности
-            </a>
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }
