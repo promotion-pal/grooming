@@ -127,14 +127,25 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-20 bg-wrapper/5">
-        <div className="container">
+      <section className="py-20 bg-wrapper/5 relative overflow-hidden">
+        <Image
+          fill
+          src="/img/2.jpg"
+          alt="Фон - этапы груминга"
+          className="object-cover -z-10"
+          priority={false}
+        />
+
+        <div className="absolute inset-0 bg-black/90 -z-10" />
+
+        <div className="container relative z-10">
           <div className="text-center mb-12">
-            <span className="text-sm uppercase tracking-wider text-gray-400">
+            <span className="text-sm uppercase tracking-wider text-gray-300">
               Как мы работаем
             </span>
-            <h2 className="h1 mt-2 mb-4">Этапы груминга</h2>
+            <h2 className="h1 mt-2 mb-4 text-white">Этапы груминга</h2>
           </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
@@ -159,11 +170,13 @@ export default function Index() {
               },
             ].map((item) => (
               <div key={item.step} className="relative">
-                <div className="text-6xl font-bold text-wrapper/20 mb-4">
+                <div className="text-6xl font-bold text-white/20 mb-4">
                   {item.step}
                 </div>
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-gray-300 text-sm">{item.desc}</p>
+                <h3 className="text-xl font-bold mb-2 text-white">
+                  {item.title}
+                </h3>
+                <p className="text-gray-200 text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -218,14 +231,25 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-20 bg-wrapper/5">
-        <div className="container">
+      <section className="py-20 relative overflow-hidden">
+        <Image
+          fill
+          src="/img/3.jpg"
+          alt="Фон - частые вопросы"
+          className="object-cover"
+          priority={false}
+        />
+
+        <div className="absolute inset-0 bg-black/40" />
+
+        <div className="container relative z-10">
           <div className="text-center mb-12">
-            <span className="text-sm uppercase tracking-wider text-gray-400">
+            <span className="text-sm uppercase tracking-wider text-gray-300">
               Ответы на вопросы
             </span>
-            <h2 className="h1 mt-2 mb-4">Часто спрашивают</h2>
+            <h2 className="h1 mt-2 mb-4 text-white">Часто спрашивают</h2>
           </div>
+
           <div className="max-w-3xl mx-auto space-y-4">
             {[
               {
@@ -251,15 +275,15 @@ export default function Index() {
             ].map((item) => (
               <details
                 key={item.q}
-                className="bg-wrapper/10 rounded-lg p-4 group"
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-4 group border border-white/20"
               >
-                <summary className="font-semibold cursor-pointer list-none flex justify-between items-center">
+                <summary className="font-semibold cursor-pointer list-none flex justify-between items-center text-white">
                   {item.q}
-                  <span className="text-2xl group-open:rotate-45 transition-transform">
+                  <span className="text-2xl group-open:rotate-45 transition-transform text-white">
                     +
                   </span>
                 </summary>
-                <p className="text-gray-300 mt-3 pl-2">{item.a}</p>
+                <p className="text-gray-200 mt-3 pl-2">{item.a}</p>
               </details>
             ))}
           </div>
