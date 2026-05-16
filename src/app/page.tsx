@@ -1,29 +1,42 @@
 import { appConfig } from "@/shared/config/app";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Index() {
   return (
     <div className="min-h-screen">
       <section className="relative min-h-[600px] flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30 z-10" />
+        <div className="absolute inset-0 z-10" />
+
+        <Image
+          fill
+          src="/img/intro.webp"
+          alt="intro"
+          className="object-cover"
+        />
+
         <div className="container relative z-20">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               Профессиональный груминг
-              <span className="block text-3xl md:text-4xl mt-2 text-gray-300">
+              <span className="block text-3xl md:text-4xl mt-2">
                 для ваших питомцев
               </span>
             </h1>
+
             <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
               Забота, любовь и профессиональный уход за вашими питомцами. Более
               5 лет опыта, тысячи довольных клиентов и их хвостатых друзей.
             </p>
+
             <div className="flex flex-wrap gap-4">
-              <a
+              <Link
                 href={appConfig.company.phone.link}
                 className="inline-flex items-center px-8 py-3 bg-wrapper text-wrapper-foreground rounded-full font-semibold hover:scale-105 transition-transform"
               >
                 Записаться онлайн
-              </a>
+              </Link>
+
               <button className="inline-flex items-center px-8 py-3 border-2 border-wrapper rounded-full font-semibold hover:bg-wrapper hover:text-wrapper-foreground transition-all">
                 Наши работы
               </button>
@@ -38,12 +51,15 @@ export default function Index() {
             <span className="text-sm uppercase tracking-wider text-gray-400">
               Почему выбирают нас
             </span>
+
             <h2 className="h1 mt-2 mb-4">Наши преимущества</h2>
+
             <p className="text-gray-300 max-w-2xl mx-auto">
               Мы создали идеальные условия для комфортного пребывания вашего
               питомца
             </p>
           </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
