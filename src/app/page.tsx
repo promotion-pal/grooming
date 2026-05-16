@@ -51,7 +51,7 @@ export default function Index() {
           <Image
             fill
             alt="Background"
-            src="/img/1.jpg"
+            src="/img/1.webp"
             className="object-cover"
             style={{ objectPosition: "50% 50%" }}
           />
