@@ -1,4 +1,5 @@
 import { appConfig } from "@/shared/config/app";
+import { Map } from "@/widgets/site/map";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -472,14 +473,8 @@ export default function Index() {
                 </a>
               </div>
             </div>
-            <div>
-              <div className="bg-wrapper/10 rounded-xl h-80 flex items-center justify-center border border-wrapper/20">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🗺️</div>
-                  <p className="text-gray-400">Здесь будет карта</p>
-                </div>
-              </div>
-            </div>
+
+            <Map />
           </div>
         </div>
       </section>

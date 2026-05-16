@@ -2,6 +2,7 @@ services:
   web:
     container_name: "grooming-web"
     build:
+      context: .
       dockerfile: Dockerfile
     networks:
       - traefik-network
