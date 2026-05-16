@@ -9,5 +9,7 @@ export const appConfig = {
       link: "mailto:info@grooming.com",
       label: "info@grooming.com",
     },
+
+    address: "",
   },
 };

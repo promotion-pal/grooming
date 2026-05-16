@@ -34,4 +34,7 @@ body {
   .container {
     @apply max-w-350 mx-auto px-4;
   }
+  .inline-icon {
+    @apply flex items-center;
+  }
 }

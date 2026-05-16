@@ -1,4 +1,5 @@
 import { appConfig } from "@/shared/config/app";
+import { PriceComponent } from "@/shared/ui/price";
 import { Map } from "@/widgets/site/map";
 import Image from "next/image";
 import Link from "next/link";
@@ -122,105 +123,7 @@ export default function Index() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                name: "Комплексный уход",
-                price: "от 800 ₴",
-                duration: "1.5-2 часа",
-                items: [
-                  "Мытье",
-                  "Сушка",
-                  "Вычесывание",
-                  "Стрижка когтей",
-                  "Чистка ушей",
-                ],
-              },
-              {
-                name: "Модельная стрижка",
-                price: "от 600 ₴",
-                duration: "1-1.5 часа",
-                items: [
-                  "Стрижка по породе",
-                  "Оформление морды",
-                  "Филировка",
-                  "Обработка лап",
-                ],
-              },
-              {
-                name: "Гигиена",
-                price: "от 300 ₴",
-                duration: "30-40 мин",
-                items: [
-                  "Стрижка когтей",
-                  "Чистка ушей",
-                  "Выстригание подушечек лап",
-                  "Гигиена глаз",
-                ],
-              },
-              {
-                name: "Тримминг",
-                price: "от 700 ₴",
-                duration: "1.5-2 часа",
-                items: [
-                  "Выщипывание отмершей шерсти",
-                  "Обработка",
-                  "Формирование силуэта",
-                ],
-              },
-              {
-                name: "Груминг кошек",
-                price: "от 500 ₴",
-                duration: "1-1.5 часа",
-                items: [
-                  "Вычесывание колтунов",
-                  "Мытье",
-                  "Стрижка когтей",
-                  "Чистка ушей",
-                ],
-              },
-              {
-                name: "SPA-уход",
-                price: "от 1000 ₴",
-                duration: "2-2.5 часа",
-                items: [
-                  "Аромамытье",
-                  "Маска для шерсти",
-                  "Пилинг",
-                  "Массаж",
-                  "Парфюм",
-                ],
-              },
-            ].map((service) => (
-              <div
-                key={service.name}
-                className="bg-wrapper/5 rounded-xl p-6 border border-wrapper/20 hover:border-wrapper/40 transition-all"
-              >
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-bold">{service.name}</h3>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-wrapper">
-                      {service.price}
-                    </div>
-                    <div className="text-xs text-gray-400">
-                      {service.duration}
-                    </div>
-                  </div>
-                </div>
-                <ul className="space-y-2">
-                  {service.items.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-center gap-2 text-sm text-gray-300"
-                    >
-                      <span className="text-wrapper">✓</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          <PriceComponent />
         </div>
       </section>
 
@@ -444,7 +347,7 @@ export default function Index() {
                 </div>
                 <div>
                   <div className="text-gray-400 mb-1">Адрес</div>
-                  <div className="text-lg">г. Киев, ул. Примерная, 123</div>
+                  <div className="text-lg">{appConfig.company.address}</div>
                 </div>
                 <div>
                   <div className="text-gray-400 mb-1">График работы</div>
