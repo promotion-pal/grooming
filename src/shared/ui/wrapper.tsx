@@ -2,7 +2,7 @@
 
 import { FC } from "react";
 import { CommonStyleProps } from "./types";
-import { cn } from "prom-pal-ui";
+import { cn } from "../lib/utils";
 
 interface CommonWrapperProps extends CommonStyleProps {
   children: React.ReactNode;
